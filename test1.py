@@ -1,9 +1,13 @@
-# Python program to convert
-# CSV to HTML Table
+#By: Tiffany Peck and Noah Coley
+#Last Modified: 12/02/22
+#
+#
+#Instructions
+#1. To run the file, use CMD or Anaconda(python test1.py) to run the file
+#2.
 import pandas as pd
 import numpy as np
-# to read csv file named
-file = pd.read_csv("datafile.csv")
+file = pd.read_csv("datafile.csv") # to read csv file named
 
 
 print("-----------------------------------------")
