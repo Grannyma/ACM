@@ -19,6 +19,8 @@ found = False
 foundPass = False
 userList = []
 indexofUser=0
+
+#Finding the username in csv
 while not found:
  for i in file['userid']:
   if(i==user):
@@ -29,7 +31,8 @@ while not found:
     break
  print("Not Found..")
  user = input("Enter User: ")
-#Finding the User Above
+
+#Finding the pass in csv
 passI = input("Enter Pass: ")
 while not foundPass:
  for z in file['passid']:
@@ -39,7 +42,8 @@ while not foundPass:
     break
  print("Not Found..")
  passI = input("Enter Pass: ")
-#Finding the Pass Above
+
+#Splitting the userList so it accepts the roles as seperate elements
 userList = [item.split(', ') for item in userList]
 userList = [item for l in userList for item in l]
 print("SUCCESS!!")
@@ -48,6 +52,7 @@ print("                  MENU               ")
 print("Welcome "+ user) #display username
 print("Your roles are:", *userList) #display roles
 print("")
+
 #Menu Options
 print("[1] Admin Access ") #admins only
 print("[2] Manuscripts") #author only
