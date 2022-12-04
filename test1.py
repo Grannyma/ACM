@@ -35,7 +35,7 @@ while not found:
 #Finding the User Above
 passI = input("Enter Pass: ")
 while not foundPass:
- for z in file[' passid']:
+ for z in file['passid']:
   if(z==passI):
    foundPass=True
  if foundPass:   
@@ -43,9 +43,8 @@ while not foundPass:
  print("Not Found..")
  passI = input("Enter Pass: ")
 #Finding the Pass Above
-
 userList = [item.split(', ') for item in userList]
-print(userList[0])
+userList = [item for l in userList for item in l]
 print("SUCCESS!!")
 print("------------------------------------------")
 print("                  MENU               ")

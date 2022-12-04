@@ -1,11 +1,11 @@
-userid, passid, roles
-testaut1, author123,"author, editor"
-testaut2, author456,author
-testedi1, editor123,"editor, author, reviewer"
-testedi2, editor456,editor
-testasse1, aeditor123," ae, reviewer"
-testasse2, aeditor456,ae
-testrev1, review123,reviewer
-testrev2, review456,reviewer
-testadmin1, admin123,admin
-testadmin2, admin456,"admin, author"
+userid,passid,roles
+testaut1,author123,"author, editor"
+testaut2,author456,author
+testedi1,editor123,"editor, author, reviewer"
+testedi2,editor456,editor
+testasse1,aeditor123,"ae, reviewer"
+testasse2,aeditor456,ae
+testrev1,review123,reviewer
+testrev2,review456,reviewer
+testadmin1,admin123,admin
+testadmin2,admin456,"admin, author"
