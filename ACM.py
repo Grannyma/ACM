@@ -11,35 +11,62 @@ from test1 import user #get user value from test1
 from test1 import passI #get pass value from test1
 from test1 import userList #get list value from test1
 from test1 import readInput #get input value from test1
-readInput = int(readInput)
 
-# target = ''
-# msg = ''
-# def roleSearch(userRoles):
-#     userRoles = csv.reader(userList)
-#     for roles in userRoles:
-#         if roles == target:
-#             return msg
+# def displayMenu(menuOption):
+#     print("------------------------------------------")
+#     print("         Welcome to Admin Access          ")
+#     print("------------------------------------------")
+#     print("Please chose an option:")
+#     print("[1] Transfer Ownership of an object ")
+#     print("[2] Grant rights to a subject")
+#     print("[3] Delete rights to an object ")
+#     print("[4] Modify object(s)")
+#     print("[5] Modify Subject(s)")
+#     print("[0] Go back")
 
+#Defines the variables for userid, password, and role
 class ACM:
     def __init__(self,u,p,r):
         self.userInp = u
         self.passInp = p
         self.roles = r
 
+#reads through the userList to check if menu option is accessable
+def readUserList(role):
+    access = False
+    for i in userList:
+        if i == role:
+            access = True
+            print("Access Granted")
+    if access == False:
+        print("Access Denied")
+
+
+#parses the input at provides access rights dependent on roles
 def switch(result):
     if result == 1:
-        return "You can become a web developer."
+        activeRole = 'admin'
+        return readUserList(activeRole)
     elif result == 2:
-        return "You can become a backend developer."
+        activeRole = 'author'
+        return readUserList(activeRole)
     elif result == 3:
-        return "You can become a Data Scientist"
+        activeRole = 'ae'
+        return readUserList(activeRole)
     elif result == 4:
-        return "You can become a Blockchain developer."
+        activeRole = 'editor'
+        return readUserList(activeRole)
     elif result == 5:
-        return "You can become a mobile app developer"
+        activeRole = 'reviewer'
+        return readUserList(activeRole)
+    elif result == 0:
+        print("Logging out...")
+        exit()
+    else:
+        print("Not a valid input, please try again!")
+        readInput = int(input())
 
-acm1 = ACM(user, passI, userList)
 print(switch(readInput))
+acm1 = ACM(user, passI, userList)
 #print(acm1.passInp)
 #print(acm1.listing)

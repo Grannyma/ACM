@@ -58,5 +58,5 @@ print("[3] Invites ") #ae only
 print("[4] Score Review") #editors only
 print("[5] See Review ") #reviewers only
 print("[0] Log Out")
-readInput = input()
+readInput = int(input())
 #print("----------------------------------------")
