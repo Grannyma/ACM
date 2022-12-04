@@ -27,8 +27,9 @@ class ACM:
             return "You can become a Blockchain developer."
         elif read == 5:
             return "You can become a mobile app developer"
-acm1 = ACM(user, passI, userList)
-swtich(readInput)
-#print(acm1.userInp)
-#print(acm1.passInp)
-#print(acm1.listing)
+
+acm1 = ACM(user, passI, userList[0])
+#swtich(readInput)
+print(acm1.userInp)
+print(acm1.passInp)
+print(acm1.listing)

@@ -44,7 +44,8 @@ while not foundPass:
  passI = input("Enter Pass: ")
 #Finding the Pass Above
 
-userList = userList.str.split(', ')
+userList = [item.split(', ') for item in userList]
+print(userList[0])
 print("SUCCESS!!")
 print("------------------------------------------")
 print("                  MENU               ")
@@ -58,4 +59,5 @@ print("[3] Invites ") #ae only
 print("[4] Score Review") #editors only
 print("[5] See Review ") #reviewers only
 print("[0] Log Out")
+readInput = input()
 #print("----------------------------------------")
