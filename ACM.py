@@ -5,31 +5,16 @@
 #Instructions
 #1. To run the file, use CMD or Anaconda(python test1.py) to run the file
 #2.
-import test1
-import csv
-from test1 import user #get user value from test1
-from test1 import passI #get pass value from test1
 from test1 import userList #get list value from test1
 from test1 import readInput #get input value from test1
 
-# def displayMenu(menuOption):
-#     print("------------------------------------------")
-#     print("         Welcome to Admin Access          ")
-#     print("------------------------------------------")
-#     print("Please chose an option:")
-#     print("[1] Transfer Ownership of an object ")
-#     print("[2] Grant rights to a subject")
-#     print("[3] Delete rights to an object ")
-#     print("[4] Modify object(s)")
-#     print("[5] Modify Subject(s)")
-#     print("[0] Go back")
-
 #Defines the variables for userid, password, and role
 class ACM:
-    def __init__(self,u,p,r):
-        self.userInp = u
-        self.passInp = p
+    def __init__(self, r):
         self.roles = r
+
+acm1 = ACM(userList)
+print(acm1.roles)
 
 #reads through the userList to check if menu option is accessable
 def readUserList(role):
@@ -38,6 +23,7 @@ def readUserList(role):
         if i == role:
             access = True
             print("Access Granted")
+            displayMenu(role)
     if access == False:
         print("Access Denied")
 
@@ -66,7 +52,10 @@ def switch(result):
         print("Not a valid input, please try again!")
         readInput = int(input())
 
+def displayMenu(role):
+    print("------------------------------------------")
+    print("         Welcome to {} Access          ".format(role))
+    print("------------------------------------------")
+    print("There are no functionalities attached to \n this but thank you for downloading!")
+
 print(switch(readInput))
-acm1 = ACM(user, passI, userList)
-#print(acm1.passInp)
-#print(acm1.listing)
