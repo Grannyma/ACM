@@ -1,10 +1,7 @@
 #By: Tiffany Peck and Noah Coley
-#Last Modified: 12/02/22
+#Last Modified: 12/04/22
 #
 #
-#Instructions
-#1. To run the file, use CMD or Anaconda(python test1.py) to run the file
-#2.
 import pandas as pd
 import numpy as np
 file = pd.read_csv("datafile.csv") # to read csv file named
